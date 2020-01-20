@@ -19,8 +19,13 @@
                 $badword = $_GET["word"]; //Prendo tramite GET da Url la badword
                 $lowercase_badword = strtolower($badword); //Trasformo la badword in lower case
 
+                $badword_length = strlen($badword); //Verifico lunghezza badword
+                for ($i = 0; $i < $badword_length; $i++) { //ciclo in base alla lunghezza della parola
+                    $badsign .= "*"; //Aggiungo ad una variabile un asterisco per ogni lettera
+                }
+
                 if (strpos($lowercase_text,$lowercase_badword) !== false) { //Verifico se è presente la parola nel testo originale
-                    $new_text = str_replace($lowercase_badword,"***",$lowercase_text); //Sostituisco la parola con tre *
+                    $new_text = str_replace($lowercase_badword,$badsign,$lowercase_text); //Sostituisco la parola con n *, in base alla lunghezza della parola
                     $new_text = ucfirst($new_text); //Setto la prima parola del testo maiuscola
                 } else { //Se non è presente..
                     $new_text = "Non è stata trovata alcuna parola da censurare"; //Mando un messaggio

@@ -45,10 +45,16 @@ main {
 
 #panda-img {
     position: absolute;
-    bottom: 2%;
+    bottom: 4%;
     left: 1%;
+    transition: 0.5s;
 }
 
 #panda-img img {
     width: 75%;
+}
+
+#panda-img:hover {
+    transform: scale(0.95) rotate(20deg);
+    cursor: pointer;
 }
