@@ -1,0 +1,54 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+}
+
+header {
+    height: 80px;
+    background-color: black;
+}
+
+header #cens-title {
+    color: white;
+    line-height: 80px;
+    margin-left: 10px;
+}
+
+main {
+    height: calc(100vh - 110px);
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.text {
+    float: left;
+    width: 45%;
+}
+
+.text p {
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    margin-top: 10px;
+    max-width: 75%;
+}
+
+.text.censured {
+    margin-left: 10%;
+}
+
+.censured h2 {
+    color: red;
+}
+
+#panda-img {
+    position: absolute;
+    bottom: 2%;
+    left: 1%;
+}
+
+#panda-img img {
+    width: 75%;
+}
